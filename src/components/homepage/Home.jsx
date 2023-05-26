@@ -2,10 +2,39 @@ import React from 'react'
 import './Home.css'
 import Banner from './Banner'
 import Card from '../cards/Card'
+import {Store} from '../store/Store'
 const Home = () => {
   return (
     <div className='home'>
       <Banner/>
+      <div className="home__container">
+        {
+            Store.map((ele)=>{
+                return (
+                    <div className="card_wrapper" key={ele.id}>
+                        <Card
+                        src={ele.homeMainPic}
+                        title={`${ele?.name} ‚ ${ele?.location}`}
+                        description="Unique activities we can do together, led by a world of hosts."
+                        price={`₹${ele.price}/night`}
+                        />
+                    </div>
+                )
+            })
+        }
+        <div className="card_wrapper">
+            <Card/>
+        </div>
+        <div className="card_wrapper">
+            <Card/>
+        </div>
+        <div className="card_wrapper">
+            <Card/>
+        </div>
+        <div className="card_wrapper">
+            <Card/>
+        </div>
+      </div>
       <div className="home__section">
       <Card
                 src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"

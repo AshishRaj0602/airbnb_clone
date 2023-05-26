@@ -1,4 +1,4 @@
-export const placesStore=[
+export const Store=[
 
     // tab 1 i.e tropical
     {

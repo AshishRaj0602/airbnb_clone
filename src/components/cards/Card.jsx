@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Card.css'
 import { useNavigate } from 'react-router-dom'
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -7,10 +7,11 @@ const Card = ({src,title,discription,price}) => {
   const history=useNavigate();
   return (
     <div className='card' onClick={()=> history("./search")}>
-      <img src={src} alt="" />
+      <img src={src} alt=""
+       />
       <div className="arrow">
-      <ArrowLeftIcon />
-      <ArrowRightIcon/>
+      <ArrowLeftIcon className='arrowPointer'/>
+      <ArrowRightIcon className='arrowPointer'/>
       </div>
       <div className="card__info">
         <h2>{title}</h2>
