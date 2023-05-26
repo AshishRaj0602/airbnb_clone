@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Card.css'
 import { useNavigate } from 'react-router-dom'
 const Card = ({src,title,discription,price}) => {
