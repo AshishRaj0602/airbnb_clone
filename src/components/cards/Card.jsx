@@ -10,8 +10,7 @@ const Card = ({src,title,discription,price}) => {
       <img src={src} alt=""
        />
       <div className="arrow">
-      <ArrowLeftIcon className='arrowPointer'/>
-      <ArrowRightIcon className='arrowPointer'/>
+      {/*  */}
       </div>
       <div className="card__info">
         <h2>{title}</h2>
