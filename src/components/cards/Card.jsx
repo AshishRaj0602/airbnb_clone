@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './Card.css'
 import { useNavigate } from 'react-router-dom'
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 const Card = ({src,title,discription,price}) => {
   const history=useNavigate();
   return (
