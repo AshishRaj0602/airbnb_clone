@@ -1,11 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/SearchRounded";
 import { Language } from "@mui/icons-material";
 import { ExpandMore } from "@mui/icons-material";
 import { Avatar } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 import { Link } from "react-router-dom";
 const Header = () => {
+  const [iseMobile,setIsMobile]=useState(false);
   return (
     <div className="header">
       <Link to="/">
@@ -20,11 +23,17 @@ const Header = () => {
         <input type="text" />
         <SearchIcon />
       </div>
-      <div className="header__right">
+      <div className="mobile" onClick={()=>setIsMobile(!iseMobile)}>
+        {
+          iseMobile? <CloseIcon/>:<MenuIcon/>
+        }
+        </div>
+      <div className={iseMobile? "ismobile":"header__right"}>
         <p>Become a host</p>
         <Language />
         <ExpandMore />
         <Avatar />
+        
       </div>
     </div>
   );

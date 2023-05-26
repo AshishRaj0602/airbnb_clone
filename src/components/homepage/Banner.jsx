@@ -4,7 +4,7 @@ import { Button } from '@mui/material'
 import DatePicker from './DatePicker';
 import {useNavigate} from "react-router-dom"
 const Banner = () => {
-  const history=useNavigate()
+  const history=useNavigate();
   const [showsearch,setShowsearch]=useState(false);
   return (
     <div className='banner'>
